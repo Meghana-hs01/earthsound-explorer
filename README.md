@@ -1,8 +1,18 @@
 # EarthExplorer
 
+Earth analog discovery for future Moon and Mars missions.
+
 EarthExplorer is a web application for identifying Earth locations that best serve as analog environments for future Moon and Mars missions.
 
 Built for NASA Space Apps Challenge 2026, Challenge 10: Identify Earth Locations that Analog the Permanent Moon Base Locations and Mars.
+
+## Project Summary
+
+EarthExplorer helps mission planners, researchers, and field teams find the most promising Earth-based analog environments for lunar and Martian exploration. By combining climate, terrain, and environmental data with planetary reference values, the platform ranks candidate Earth sites against Moon and Mars target conditions and highlights the strongest matches.
+
+## Why It Matters
+
+Selecting the right analog site is critical for testing equipment, procedures, habitat concepts, and exploration workflows before deployment in extreme extraterrestrial environments. EarthExplorer makes this process more transparent, faster, and evidence-driven by turning scattered datasets into a clear comparison and scoring workflow.
 
 ## Overview
 
