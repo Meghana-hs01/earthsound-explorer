@@ -1,0 +1,161 @@
+{
+  "version": "1.0",
+  "datasets": [
+    {
+      "name": "NASA POWER monthly point API (climate normals)",
+      "provider": "NASA Langley Research Center, POWER Project",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point",
+      "status": "used",
+      "used_for": "Earth candidate temperature, humidity and precipitation (2016-2025 mean)",
+      "resolution": "0.5 deg x 0.625 deg (MERRA-2 based, community ag)",
+      "coverage": "1981 to about 2 months before present",
+      "units": "T2M °C, RH2M %, PRECTOTCORR mm/day",
+      "processing": "Monthly values averaged per year (full 12 months required), then averaged over the years. Annual precipitation = mean mm/day x 365.",
+      "limitations": "Reanalysis model output, not station observations. Grid cell average, not a point measurement. Missing value -999 is dropped."
+    },
+    {
+      "name": "NASA POWER hourly and daily point API",
+      "provider": "NASA Langley Research Center, POWER Project",
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point",
+      "status": "used",
+      "used_for": "Jukebox Mode 1 (latest valid hour) and Mode 3 (14 daily frames)",
+      "resolution": "Hourly and daily reanalysis, grid cell",
+      "coverage": "Lags real time by about 2 days",
+      "units": "T2M °C, RH2M %, QV2M g/kg, WS2M m/s",
+      "processing": "Latest valid value per variable; -999 dropped.",
+      "limitations": "Lagged reanalysis, not live. Not a station reading."
+    },
+    {
+      "name": "Open-Meteo elevation API",
+      "provider": "Open-Meteo (open-source weather API, uses Copernicus DEM 90 m)",
+      "url": "https://api.open-meteo.com/v1/elevation",
+      "status": "used",
+      "used_for": "Elevation at each candidate point and its 3x3 neighbour grid (slope, roughness)",
+      "resolution": "About 90 m (Copernicus DEM); neighbour spacing 0.05 deg (about 5 km)",
+      "coverage": "Global",
+      "units": "m above sea level",
+      "processing": "Slope = arctan of central-difference gradient magnitude. Roughness = population std dev of the 9 elevations.",
+      "limitations": "DEM resolution is coarser than the features it describes. Derived terrain metrics are proxies, not measurements."
+    },
+    {
+      "name": "Open-Meteo forecast API (current conditions)",
+      "provider": "Open-Meteo",
+      "url": "https://api.open-meteo.com/v1/forecast",
+      "status": "used",
+      "used_for": "Jukebox Mode 1 live model values",
+      "resolution": "Model grid",
+      "coverage": "Global",
+      "units": "temperature_2m °C, relative_humidity_2m %, wind_speed_10m m/s",
+      "processing": "Current value as returned.",
+      "limitations": "Weather model output, not a NASA observation."
+    },
+    {
+      "name": "Open-Meteo air quality API (PM2.5)",
+      "provider": "Open-Meteo, CAMS model data",
+      "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+      "status": "used",
+      "used_for": "Jukebox Mode 1 PM2.5 (model)",
+      "resolution": "About 11 km CAMS grid",
+      "coverage": "Global",
+      "units": "µg/m³",
+      "processing": "Current value as returned.",
+      "limitations": "Model output, not a ground station measurement."
+    },
+    {
+      "name": "NASA GIBS (Global Imagery Browse Services)",
+      "provider": "NASA Earth Science Data and Information System",
+      "url": "https://gibs.earthdata.nasa.gov/",
+      "status": "used",
+      "used_for": "Map imagery (MODIS Terra true colour and AIRS Surface Relative Humidity Daily Day) in Jukebox Mode 3 and Global Discovery Map",
+      "resolution": "250 m to 1 km depending on layer",
+      "coverage": "Global, daily",
+      "units": "Imagery",
+      "processing": "Displayed as map tiles via WMTS. Not used for scoring.",
+      "limitations": "Visual reference and atmospheric humidity layer. Not a point ground measurement."
+    },
+    {
+      "name": "NASA GISS Surface Temperature Analysis (GISTEMP v4)",
+      "provider": "NASA Goddard Institute for Space Studies",
+      "url": "https://data.giss.nasa.gov/gistemp/",
+      "status": "used",
+      "used_for": "Jukebox Mode 2 global anomaly since 1880 (baseline 1951-1980)",
+      "resolution": "Global annual mean",
+      "coverage": "1880 to latest published year",
+      "units": "°C anomaly",
+      "processing": "J-D (annual mean) column. *** dropped. Integer entries are hundredths of a degree and are divided by 100; entries with a decimal point are used as degrees.",
+      "limitations": "Historical analysis, not a live series."
+    },
+    {
+      "name": "Planetary reference values (Moon and Mars)",
+      "provider": "Documented per value in reference_regions.json (LOLA, MOLA, Diviner, REMS, MEDA, USGS)",
+      "url": "https://planetarynames.wr.usgs.gov/",
+      "status": "used where cited",
+      "used_for": "Reference profiles for Moon and Mars comparison",
+      "resolution": "Orbital laser altimetry (LOLA, MOLA) and surface science payloads (Diviner, REMS, MEDA)",
+      "coverage": "Shackleton, Malapert Massif, Jezero, and Gale craters",
+      "units": "As listed per parameter",
+      "processing": "Only values with a recorded peer-reviewed citation are scored. Others are excluded and transparently labelled.",
+      "limitations": "Planetary numbers reflect published surface in-situ and orbital datasets. Parameters without baseline-independent values (e.g. fractal roughness) are excluded."
+    },
+    {
+      "name": "Known Earth analog site catalogue",
+      "provider": "Compiled from the citations listed in analog_catalogue.json",
+      "url": "analog_catalogue.json",
+      "status": "used",
+      "used_for": "Labelling candidates as known analog or not confirmed analog",
+      "resolution": "Site centre points",
+      "coverage": "Six benchmark sites",
+      "units": "Degrees",
+      "processing": "Candidate within 1.5 degrees of a catalogue site is labelled known.",
+      "limitations": "Coordinates not yet verified against a gazetteer. Catalogue is short and not exhaustive."
+    },
+    {
+      "name": "LRO LOLA, Diviner, LROC (lunar)",
+      "provider": "NASA Lunar Reconnaissance Orbiter",
+      "url": "https://lunar.gsfc.nasa.gov/",
+      "status": "not used in this version",
+      "used_for": "Would supply lunar topography, temperature and illumination",
+      "resolution": "Varies",
+      "coverage": "Varies",
+      "units": "Varies",
+      "processing": "Requires downloading and processing PDS files.",
+      "limitations": "Not integrated. Lunar values come only from cited reference profiles."
+    },
+    {
+      "name": "MOLA, CTX, HiRISE, CRISM (Mars)",
+      "provider": "NASA Mars Reconnaissance Orbiter and Mars Global Surveyor, via PDS",
+      "url": "https://pds.nasa.gov/",
+      "status": "not used in this version",
+      "used_for": "Would supply Martian topography, imagery and mineralogy",
+      "resolution": "Varies",
+      "coverage": "Varies",
+      "units": "Varies",
+      "processing": "Requires downloading and processing PDS raster files.",
+      "limitations": "Not integrated. Mars values come only from cited reference profiles."
+    },
+    {
+      "name": "NDVI vegetation index",
+      "provider": "NASA LP DAAC (MODIS)",
+      "url": "https://lpdaac.usgs.gov/",
+      "status": "not used in this version",
+      "used_for": "Vegetation criterion",
+      "resolution": "Varies",
+      "coverage": "Varies",
+      "units": "NDVI",
+      "processing": "Not retrieved. Criterion excluded from scoring.",
+      "limitations": "Not integrated."
+    },
+    {
+      "name": "SRTM via OpenTopography, Copernicus DEM, USGS geology",
+      "provider": "NASA JPL, ESA, USGS",
+      "url": "https://opentopography.org/",
+      "status": "not used in this version",
+      "used_for": "Higher-resolution elevation and geological maps",
+      "resolution": "Varies",
+      "coverage": "Varies",
+      "units": "Varies",
+      "processing": "Not integrated.",
+      "limitations": "Not integrated. Elevation uses Open-Meteo, which serves Copernicus DEM."
+    }
+  ]
+}

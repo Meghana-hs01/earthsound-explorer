@@ -1,0 +1,90 @@
+{
+  "version": "1.0",
+  "method": "Per-criterion similarity s_i in [0,1]. Numeric: s = 1 - min(1, |x - r| / scale). Categorical: 1 if same class, 0.5 if listed as related, else 0. Score = sum(w_i * s_i) / sum(w_i) over INCLUDED criteria. Coverage = sum(w_i included) / sum(w_i all). Criteria with a missing value on either side are excluded, not scored as zero.",
+  "confidence_rule": "If coverage is below 0.5 the score is marked low confidence.",
+  "criteria": {
+    "elevation": {
+      "label": "Elevation",
+      "weight": 0.10,
+      "type": "numeric",
+      "scale": 5000,
+      "unit": "m",
+      "earth_key": "elevation_m",
+      "ref_key": "elevation_m",
+      "dataset": "Open-Meteo elevation API (Earth); reference profile (Moon/Mars)"
+    },
+    "slope": {
+      "label": "Terrain slope",
+      "weight": 0.20,
+      "type": "numeric",
+      "scale": 20,
+      "unit": "deg",
+      "earth_key": "slope_deg",
+      "ref_key": "slope_deg",
+      "dataset": "Derived from Open-Meteo elevation grid (Earth); reference profile (Moon/Mars)"
+    },
+    "roughness": {
+      "label": "Surface roughness",
+      "weight": 0.10,
+      "type": "numeric",
+      "scale": 100,
+      "unit": "m (std dev of 3x3 elevation grid)",
+      "earth_key": "roughness_m",
+      "ref_key": "roughness_m",
+      "dataset": "Derived from Open-Meteo elevation grid (Earth); reference profile (Moon/Mars)"
+    },
+    "temperature": {
+      "label": "Mean surface air temperature",
+      "weight": 0.15,
+      "type": "numeric",
+      "scale": 60,
+      "unit": "°C",
+      "earth_key": "temp_mean_c",
+      "ref_key": "temp_mean_c",
+      "dataset": "NASA POWER monthly point API, 2016-2025 mean (Earth); reference profile (Moon/Mars)"
+    },
+    "aridity": {
+      "label": "Aridity proxy (annual precipitation)",
+      "weight": 0.15,
+      "type": "numeric",
+      "scale": 2000,
+      "unit": "mm/yr",
+      "earth_key": "precip_mm_yr",
+      "ref_key": "precip_mm_yr",
+      "dataset": "NASA POWER PRECTOTCORR, derived annual total (Earth); reference profile where cited"
+    },
+    "vegetation": {
+      "label": "Vegetation (NDVI)",
+      "weight": 0.10,
+      "type": "numeric",
+      "scale": 1,
+      "unit": "NDVI",
+      "earth_key": "ndvi",
+      "ref_key": "ndvi",
+      "dataset": "Not integrated in this version. Excluded from scoring."
+    },
+    "geology": {
+      "label": "Geological class",
+      "weight": 0.10,
+      "type": "categorical",
+      "unit": "class",
+      "earth_key": "geology_class",
+      "ref_key": "geology_class",
+      "related": [
+        ["volcanic_terrain", "impact_crater"],
+        ["arid_basin", "polar_cold_desert"]
+      ],
+      "dataset": "Assigned from the search region (Earth, assumption, not measured); reference profile (Moon/Mars)"
+    },
+    "environment": {
+      "label": "Relative humidity",
+      "weight": 0.10,
+      "type": "numeric",
+      "scale": 100,
+      "unit": "%",
+      "earth_key": "rh_mean_pct",
+      "ref_key": "rh_mean_pct",
+      "dataset": "NASA POWER monthly point API RH2M (Earth); reference profile where cited"
+    }
+  }
+}

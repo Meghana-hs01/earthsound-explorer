@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "sampling": "Regular grid over each bounding box at the caller's spacing (default 1.0 degree), capped per region by even stride. Deterministic: the same bbox and spacing always give the same points.",
+  "regions": [
+    {
+      "id": "atacama",
+      "name": "Atacama Desert, Chile",
+      "bbox": [-27.0, -18.0, -71.0, -68.0],
+      "geology_class": "arid_basin",
+      "reason": "Hyper-arid desert. Included as a benchmark analog region; see analog_catalogue.json for citation."
+    },
+    {
+      "id": "death_valley",
+      "name": "Death Valley, USA",
+      "bbox": [35.5, 37.0, -117.5, -116.0],
+      "geology_class": "arid_basin",
+      "reason": "Arid basin with extreme temperature range. Included as a benchmark analog region."
+    },
+    {
+      "id": "canadian_high_arctic",
+      "name": "Canadian High Arctic (impact-crater region)",
+      "bbox": [74.0, 78.0, -95.0, -85.0],
+      "geology_class": "impact_crater",
+      "reason": "Polar cold desert containing impact structures. Includes the Haughton benchmark site."
+    },
+    {
+      "id": "iceland_volcanic",
+      "name": "Iceland volcanic terrain",
+      "bbox": [63.5, 65.5, -22.0, -16.0],
+      "geology_class": "volcanic_terrain",
+      "reason": "Volcanic terrain. Included to test volcanic-field candidates."
+    },
+    {
+      "id": "hawaii_volcanic",
+      "name": "Hawaii volcanic fields",
+      "bbox": [19.0, 20.3, -156.0, -155.0],
+      "geology_class": "volcanic_terrain",
+      "reason": "Basaltic volcanic terrain. Included to test volcanic-field candidates."
+    },
+    {
+      "id": "idaho_lava_fields",
+      "name": "Snake River Plain lava fields, Idaho",
+      "bbox": [42.5, 44.0, -115.0, -112.5],
+      "geology_class": "volcanic_terrain",
+      "reason": "Basaltic lava fields. Included to test volcanic-field candidates."
+    },
+    {
+      "id": "mcmurdo_dry_valleys",
+      "name": "McMurdo Dry Valleys, Antarctica",
+      "bbox": [-78.5, -77.0, 160.0, 164.0],
+      "geology_class": "polar_cold_desert",
+      "reason": "Polar cold desert. Included to test polar candidates."
+    },
+    {
+      "id": "sahara_arid",
+      "name": "Algerian Sahara (arid basin)",
+      "bbox": [20.0, 26.0, -5.0, 5.0],
+      "geology_class": "arid_basin",
+      "reason": "Hot desert. Included to test arid-basin candidates."
+    }
+  ]
+}

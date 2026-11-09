@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "purpose": "Known documented Earth analog sites. Used to label Earth candidates as 'known analog' or 'candidate, not confirmed analog'. A candidate is 'known' only if it lies within 1.5 degrees of one of these sites.",
+  "coordinate_warning": "Coordinates verified against USGS GNIS, SCAR Composite Gazetteer, Earth Impact Database, and peer-reviewed literature.",
+  "sites": [
+    {
+      "id": "atacama",
+      "name": "Atacama Desert, Chile",
+      "lat": -23.86,
+      "lon": -69.13,
+      "coordinate_verified": true,
+      "description": "Hyper-arid desert benchmark site for Mars analog studies (Yungay / central depression).",
+      "citation": "https://doi.org/10.1126/science.1088425"
+    },
+    {
+      "id": "haughton",
+      "name": "Haughton impact crater, Devon Island, Canada",
+      "lat": 75.38,
+      "lon": -89.67,
+      "coordinate_verified": true,
+      "description": "Impact crater in a polar cold desert, primary Mars and Moon analog site (NASA Haughton-Mars Project).",
+      "citation": "http://www.passc.net/EarthImpactDatabase/New%20website_05-2018/Haughton.html"
+    },
+    {
+      "id": "death_valley",
+      "name": "Death Valley, USA",
+      "lat": 36.46,
+      "lon": -116.87,
+      "coordinate_verified": true,
+      "description": "Arid basin with extreme diurnal temperature range and evaporite geology. USGS GNIS Feature ID 241416.",
+      "citation": "https://geonames.usgs.gov/"
+    },
+    {
+      "id": "mauna_kea",
+      "name": "Mauna Kea, Hawaii",
+      "lat": 19.82,
+      "lon": -155.47,
+      "coordinate_verified": true,
+      "description": "High-altitude basaltic volcanic terrain, lunar and Martian regolith analog. USGS GNIS Feature ID 362483.",
+      "citation": "https://geonames.usgs.gov/"
+    },
+    {
+      "id": "craters_of_the_moon",
+      "name": "Craters of the Moon, Idaho, USA",
+      "lat": 43.46,
+      "lon": -113.52,
+      "coordinate_verified": true,
+      "description": "Basaltic lava flows and cinder cones, Apollo and planetary rover analog terrain. USGS GNIS ID 396395.",
+      "citation": "https://www.nps.gov/crmo"
+    },
+    {
+      "id": "mcmurdo_dry_valleys",
+      "name": "McMurdo Dry Valleys, Antarctica",
+      "lat": -77.50,
+      "lon": 162.50,
+      "coordinate_verified": true,
+      "description": "Polar hyper-arid cold desert, permafrost and cryptoendolithic habitat Mars analog. SCAR Gazetteer ID 9253.",
+      "citation": "https://data.aad.gov.au/aadc/gaz/scar/"
+    }
+  ]
+}

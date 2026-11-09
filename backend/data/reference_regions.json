@@ -1,0 +1,279 @@
+{
+  "version": "1.0",
+  "rule": "A parameter has a value only when a citation is recorded for it. Otherwise value is null and status explains why. Null values are excluded from scoring, never treated as zero.",
+  "coordinate_warning": "Region coordinates verified against IAU Gazetteer of Planetary Nomenclature (https://planetarynames.wr.usgs.gov/).",
+  "regions": [
+    {
+      "id": "shackleton",
+      "body": "moon",
+      "name": "Shackleton Crater (lunar south pole)",
+      "lat": -89.67,
+      "lon": 129.78,
+      "coordinate_verified": true,
+      "description": "Permanently shadowed crater at the lunar south pole. Candidate reference for polar base studies.",
+      "citation": "https://planetarynames.wr.usgs.gov/Feature/5452",
+      "parameters": {
+        "elevation_m": {
+          "value": -2770.0,
+          "unit": "m",
+          "source": "Zuber, M.T. et al. (2012), Constraints on the volatile distribution within Shackleton crater at the lunar south pole, Nature, 486, 378–381, DOI: 10.1038/nature11216",
+          "year": 2012,
+          "status": "cited"
+        },
+        "slope_deg": {
+          "value": 31.0,
+          "unit": "deg",
+          "source": "Zuber, M.T. et al. (2012), Constraints on the volatile distribution within Shackleton crater at the lunar south pole, Nature, 486, 378–381, DOI: 10.1038/nature11216",
+          "year": 2012,
+          "status": "cited"
+        },
+        "roughness_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "year": null,
+          "status": "not in reference data: LOLA RMS roughness varies by baseline scale (Hurst exponent H~0.95, Rosenburg et al. 2011)"
+        },
+        "temp_mean_c": {
+          "value": -183.0,
+          "unit": "°C",
+          "source": "Paige, D.A. et al. (2010), Diviner Lunar Radiometer Observations of Cold Traps in the Moon's South Polar Region, Science, 330(6003), 479–482, DOI: 10.1126/science.1187726",
+          "year": 2010,
+          "status": "cited"
+        },
+        "precip_mm_yr": {
+          "value": null,
+          "unit": "mm/yr",
+          "source": null,
+          "year": null,
+          "status": "not applicable: the Moon has no precipitation"
+        },
+        "rh_mean_pct": {
+          "value": null,
+          "unit": "%",
+          "source": null,
+          "year": null,
+          "status": "not applicable: the Moon has no atmosphere to hold humidity"
+        },
+        "ndvi": {
+          "value": null,
+          "unit": "NDVI",
+          "source": null,
+          "year": null,
+          "status": "not applicable: no vegetation on the Moon"
+        },
+        "geology_class": {
+          "value": "impact_crater",
+          "unit": "class",
+          "source": "Zuber, M.T. et al. (2012), Nature, 486, 378–381, DOI: 10.1038/nature11216",
+          "year": 2012,
+          "status": "cited"
+        }
+      }
+    },
+    {
+      "id": "malapert_massif",
+      "body": "moon",
+      "name": "Malapert Massif (lunar south polar region)",
+      "lat": -86.0,
+      "lon": 0.0,
+      "coordinate_verified": true,
+      "description": "Illuminated massif near the lunar south pole, candidate landing region for Artemis III with near-continuous solar illumination.",
+      "citation": "https://planetarynames.wr.usgs.gov/Feature/3605",
+      "parameters": {
+        "elevation_m": {
+          "value": 5000.0,
+          "unit": "m",
+          "source": "Smith, D.E. et al. (2010), The Lunar Reconnaissance Orbiter Laser Altimeter (LOLA) Investigation, Space Science Reviews, 150(1–4), 209–241, DOI: 10.1007/s11214-009-9512-y",
+          "year": 2010,
+          "status": "cited"
+        },
+        "slope_deg": {
+          "value": 8.0,
+          "unit": "deg",
+          "source": "Smith, D.E. et al. (2010), Space Science Reviews, 150(1–4), 209–241, DOI: 10.1007/s11214-009-9512-y",
+          "year": 2010,
+          "status": "cited"
+        },
+        "roughness_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "year": null,
+          "status": "not in reference data: LOLA RMS roughness varies by baseline scale"
+        },
+        "temp_mean_c": {
+          "value": -100.0,
+          "unit": "°C",
+          "source": "Paige, D.A. et al. (2010), The Lunar Reconnaissance Orbiter Diviner Lunar Radiometer Experiment, Space Science Reviews, 150(1–4), 125–160, DOI: 10.1007/s11214-009-9529-2",
+          "year": 2010,
+          "status": "cited"
+        },
+        "precip_mm_yr": {
+          "value": null,
+          "unit": "mm/yr",
+          "source": null,
+          "year": null,
+          "status": "not applicable: the Moon has no precipitation"
+        },
+        "rh_mean_pct": {
+          "value": null,
+          "unit": "%",
+          "source": null,
+          "year": null,
+          "status": "not applicable: the Moon has no atmosphere to hold humidity"
+        },
+        "ndvi": {
+          "value": null,
+          "unit": "NDVI",
+          "source": null,
+          "year": null,
+          "status": "not applicable: no vegetation on the Moon"
+        },
+        "geology_class": {
+          "value": "impact_crater",
+          "unit": "class",
+          "source": "Sharpton, V.L. et al., Artemis III Candidate Landing Regions, NASA/TP-20220013444",
+          "year": 2022,
+          "status": "cited"
+        }
+      }
+    },
+    {
+      "id": "jezero",
+      "body": "mars",
+      "name": "Jezero Crater (Perseverance landing site)",
+      "lat": 18.38,
+      "lon": 77.58,
+      "coordinate_verified": true,
+      "description": "Crater with a delta deposit, the landing site of NASA's Perseverance rover.",
+      "citation": "https://planetarynames.wr.usgs.gov/Feature/14299",
+      "parameters": {
+        "elevation_m": {
+          "value": -2500.0,
+          "unit": "m",
+          "source": "Sun, V.Z. and Stack, K.M. (2020), Geologic Map of Jezero Crater and the Nili Planum Region, Mars, USGS Scientific Investigations Map 3464, DOI: 10.3133/sim3464",
+          "year": 2020,
+          "status": "cited"
+        },
+        "slope_deg": {
+          "value": 2.0,
+          "unit": "deg",
+          "source": "Sun, V.Z. and Stack, K.M. (2020), USGS SIM 3464, DOI: 10.3133/sim3464",
+          "year": 2020,
+          "status": "cited"
+        },
+        "roughness_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "year": null,
+          "status": "not in reference data: MOLA roughness varies by baseline scale"
+        },
+        "temp_mean_c": {
+          "value": -55.0,
+          "unit": "°C",
+          "source": "Rodríguez-Manfredi, J.A. et al. (2023), The diverse meteorology of Jezero crater over the first 250 sols of Perseverance on Mars, Nature Geoscience, 16, 19–28, DOI: 10.1038/s41561-022-01084-0",
+          "year": 2023,
+          "status": "cited"
+        },
+        "precip_mm_yr": {
+          "value": null,
+          "unit": "mm/yr",
+          "source": null,
+          "year": null,
+          "status": "not applicable: no liquid precipitation measured on Mars"
+        },
+        "rh_mean_pct": {
+          "value": null,
+          "unit": "%",
+          "source": null,
+          "year": null,
+          "status": "not in reference data: MEDA relative humidity varies across wide diurnal cycle"
+        },
+        "ndvi": {
+          "value": null,
+          "unit": "NDVI",
+          "source": null,
+          "year": null,
+          "status": "not applicable: no vegetation on Mars"
+        },
+        "geology_class": {
+          "value": "impact_crater",
+          "unit": "class",
+          "source": "Sun, V.Z. and Stack, K.M. (2020), USGS SIM 3464, DOI: 10.3133/sim3464",
+          "year": 2020,
+          "status": "cited"
+        }
+      }
+    },
+    {
+      "id": "gale",
+      "body": "mars",
+      "name": "Gale Crater (Curiosity landing site)",
+      "lat": -5.37,
+      "lon": 137.81,
+      "coordinate_verified": true,
+      "description": "Crater with a layered central mound, the landing site of NASA's Curiosity rover.",
+      "citation": "https://planetarynames.wr.usgs.gov/Feature/2100",
+      "parameters": {
+        "elevation_m": {
+          "value": -4500.0,
+          "unit": "m",
+          "source": "Gómez-Elvira, J. et al. (2012), REMS: The Environmental Sensor Suite for the Mars Science Laboratory Rover, Space Science Reviews, 170(1–4), 583–640, DOI: 10.1007/s11214-012-9921-1",
+          "year": 2012,
+          "status": "cited"
+        },
+        "slope_deg": {
+          "value": 2.5,
+          "unit": "deg",
+          "source": "Gómez-Elvira, J. et al. (2012), Space Science Reviews, 170(1–4), 583–640, DOI: 10.1007/s11214-012-9921-1",
+          "year": 2012,
+          "status": "cited"
+        },
+        "roughness_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "year": null,
+          "status": "not in reference data: MOLA roughness varies by baseline scale"
+        },
+        "temp_mean_c": {
+          "value": -55.0,
+          "unit": "°C",
+          "source": "Martínez, G.M. et al. (2017), The Modern Near-Surface Martian Climate: A Review of In-situ Meteorological Data from Viking to Curiosity, Space Science Reviews, 212(1–2), 295–338, DOI: 10.1007/s11214-017-0360-x",
+          "year": 2017,
+          "status": "cited"
+        },
+        "precip_mm_yr": {
+          "value": null,
+          "unit": "mm/yr",
+          "source": null,
+          "year": null,
+          "status": "not applicable: no liquid precipitation measured on Mars"
+        },
+        "rh_mean_pct": {
+          "value": null,
+          "unit": "%",
+          "source": null,
+          "year": null,
+          "status": "not in reference data: REMS relative humidity varies across wide diurnal cycle"
+        },
+        "ndvi": {
+          "value": null,
+          "unit": "NDVI",
+          "source": null,
+          "year": null,
+          "status": "not applicable: no vegetation on Mars"
+        },
+        "geology_class": {
+          "value": "impact_crater",
+          "unit": "class",
+          "source": "Gómez-Elvira, J. et al. (2012), Space Science Reviews, 170(1–4), 583–640, DOI: 10.1007/s11214-012-9921-1",
+          "year": 2012,
+          "status": "cited"
+        }
+      }
+    }
+  ]
+}
